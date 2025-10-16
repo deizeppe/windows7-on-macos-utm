@@ -252,6 +252,3 @@ Este guia é disponibilizado sob a licença [MIT](LICENSE).
 Sinta-se livre para usar, adaptar e compartilhar.
 
 ---
-
-✍️ **Autor:** Seu Nome Aqui  
-📅 **Última atualização:** Outubro de 2025
