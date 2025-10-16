@@ -238,11 +238,24 @@ plutil -p "W7_Appliance.utm/config.plist"
 
 ---
 
+## 🖥️ Exemplo de Configuração no UTM
+
+Abaixo algumas telas ilustrando como configurar a VM:
+
+### Configuração de CPU e Memória
+![Configuração de CPU e Memória](images/2_SCR-20251015-tvod.png)
+
+### Configuração de Rede
+![Configuração de Rede](images/7_SCR-20251015-twbd.png)
+
+---
+
 ## 📚 Referências
 
 - [UTM Official Site](https://mac.getutm.app)
 - [QEMU Documentation](https://www.qemu.org/documentation/)
 - [QEMU on Homebrew](https://formulae.brew.sh/formula/qemu)
+[![Tutorial de instalação do Windows 7 no UTM](https://img.youtube.com/vi/enF3zbyiNZA/0.jpg)](https://www.youtube.com/watch?v=enF3zbyiNZA)
 
 ---
 
