@@ -141,6 +141,103 @@ ifconfig
 
 ---
 
+## ⚙️ Exemplo de configuração da VM no UTM
+
+Abaixo está um exemplo real do arquivo `config.plist` de uma máquina virtual Windows 7 criada no UTM:
+
+```bash
+plutil -p "W7_Appliance.utm/config.plist"
+```
+
+```plaintext
+{
+  "Backend" => "QEMU"
+  "ConfigurationVersion" => 4
+  "Display" => [
+    0 => {
+      "DownscalingFilter" => "Linear"
+      "DynamicResolution" => 1
+      "Hardware" => "VGA"
+      "NativeResolution" => 0
+      "UpscalingFilter" => "Nearest"
+    }
+  ]
+  "Drive" => [
+    0 => {
+      "Identifier" => "9DC1BA6C-6954-44EC-A8BD-1FA9CF004968"
+      "ImageName" => "W7_Windows7.qcow2"
+      "ImageType" => "Disk"
+      "Interface" => "IDE"
+      "InterfaceVersion" => 1
+      "ReadOnly" => 0
+    }
+  ]
+  "Information" => {
+    "Icon" => "Windows7"
+    "IconCustom" => 0
+    "Name" => "W7_Appliance"
+    "UUID" => "05C1F9E9-AC5F-4F97-A80C-77C592D4A4E1"
+  }
+  "Input" => {
+    "MaximumUsbShare" => 3
+    "UsbBusSupport" => "Disabled"
+    "UsbSharing" => 0
+  }
+  "Network" => [
+    0 => {
+      "Hardware" => "e1000"
+      "IsolateFromHost" => 0
+      "MacAddress" => "7E:83:CF:D4:0C:0E"
+      "Mode" => "Shared"
+      "PortForward" => [
+      ]
+    }
+  ]
+  "QEMU" => {
+    "AdditionalArguments" => [
+    ]
+    "BalloonDevice" => 0
+    "DebugLog" => 0
+    "Hypervisor" => 0
+    "PS2Controller" => 1
+    "RNGDevice" => 1
+    "RTCLocalTime" => 0
+    "TPMDevice" => 0
+    "TSO" => 0
+    "UEFIBoot" => 0
+  }
+  "Serial" => [
+  ]
+  "Sharing" => {
+    "ClipboardSharing" => 1
+    "DirectoryShareMode" => "WebDAV"
+    "DirectoryShareReadOnly" => 0
+  }
+  "Sound" => [
+    0 => {
+      "Hardware" => "intel-hda"
+    }
+  ]
+  "System" => {
+    "Architecture" => "x86_64"
+    "CPU" => "default"
+    "CPUCount" => 2
+    "CPUFlagsAdd" => [
+    ]
+    "CPUFlagsRemove" => [
+    ]
+    "ForceMulticore" => 0
+    "JITCacheSize" => 0
+    "MemorySize" => 4096
+    "Target" => "q35"
+  }
+}
+```
+
+> 💡 Essa configuração define uma VM com 2 vCPUs, 4 GB de RAM, rede em modo “Shared (NAT)”, vídeo VGA, interface de disco IDE e arquitetura x86_64 emulada.
+
+---
+
 ## 📚 Referências
 
 - [UTM Official Site](https://mac.getutm.app)
